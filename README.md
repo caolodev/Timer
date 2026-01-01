@@ -1,40 +1,41 @@
-TimerApp — React
+# TimerApp — React + Vite
 
-Aplicação simples e eficiente de cronômetro construída com React, permitindo controlar o tempo em minutos, segundos e centésimos.
+Aplicação simples e eficiente de cronômetro construída com React, permitindo controlar o tempo em minutos, segundos e centésimos.  
 Conta com funcionalidades para iniciar, pausar, resetar, carregar tempos anteriores, e armazenar o histórico localmente através do LocalStorage.
 
-Funcionalidades
+---
 
-Exibir tempo no formato MM:SS:CS (centésimos)
+## Funcionalidades
 
-Iniciar o timer
+- Exibir tempo no formato **MM:SS:CS** (centésimos)
+- Iniciar o timer
+- Pausar o timer
+- Resetar o timer
+- Salvar registro no histórico ao resetar
+- Histórico salvo no **LocalStorage**
+- Remover itens do histórico
+- Recarregar um tempo salvo e continuar a contagem
+- Evita múltiplos timers simultâneos
+- Ícones via Font Awesome
+- Atualização a cada 10ms
 
-Pausar o timer
+---
 
-Resetar o timer
+## Tecnologias
 
-Salvar registro no histórico ao resetar
+| Tecnologia        | Descrição                         |
+| ----------------- | --------------------------------- |
+| React             | Biblioteca principal da interface |
+| Javascript (ES6+) | Lógica e controle do timer        |
+| Vite              | Build tool                        |
+| Tailwind CSS      | Estilização                       |
+| Font Awesome      | Ícones para UI                    |
+| LocalStorage      | Persistência de histórico         |
 
-Histórico salvo no localStorage
+---
 
-Remover itens do histórico
+## Estrutura de Pastas
 
-Recarregar um tempo salvo e continuar a contagem
-
-Evita múltiplos timers simultâneos
-
-Ícones via Font Awesome
-
-⚡ Atualização a cada 10ms
-
-🛠️ Tecnologias
-Tecnologia Descrição
-React Biblioteca principal da interface
-Javascript (ES6+) Lógica e controle do timer
-Tailwind CSS Estilização (opcional se usado)
-Font Awesome Ícones para UI
-LocalStorage Persistência de histórico
-Estrutura de Pastas
 src/
 ├─ components/
 │ ├─ HeadTimer.jsx
@@ -46,47 +47,15 @@ src/
 ├─ TimerApp.jsx
 └─ index.js
 
-Instalação e Execução
+## Deploy
 
-# Clonar o repositório
+O projeto está publicado no GitHub Pages e pode ser acessado em:
 
-git clone https://github.com/usuario/TimerApp.git
+https://caolodev.github.io/Timer/
 
-# Entrar na pasta
-
-cd TimerApp
-
-# Instalar dependências
-
-npm install
-
-# Rodar o projeto
-
-npm start
-
-Instalação do FontAwesome (se ainda não tiver)
-npm install @fortawesome/fontawesome-svg-core
-npm install @fortawesome/react-fontawesome
-npm install @fortawesome/free-solid-svg-icons
-
-Exemplo de uso:
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-
-<FontAwesomeIcon icon={faPlay} />
-
-📸 Demonstração (Prints)
-
-(Adicione imagens aqui se quiser)
-
-/assets/screenshot-01.png
-/assets/screenshot-02.png
-
-Como funciona o LocalStorage
+## LocalStorage
 
 Os registros ficam salvos como um array de objetos:
-
 [
 {
 "id": 1732647230042,
@@ -96,30 +65,7 @@ Os registros ficam salvos como um array de objetos:
 }
 ]
 
-Lógica do Timer (Resumo)
+## Autor
 
-Incremento acontece a cada 10ms
-
-Cada incremento representa 1 centésimo
-
-Conversão final:
-
-minutes = Math.floor(cs / 6000)
-seconds = Math.floor((cs % 6000) / 100)
-centiseconds = cs % 100
-
-Possíveis Melhorias Futuras
-
-Exportar histórico em .csv
-
-Dark mode
-
-Sons ao iniciar/pausar
-
-Transições animadas na UI
-
-Versão mobile com PWA
-
-Autor
+Edson Caolo
 Email: caolo.dev@gmail.com
-Link: https://caolodev.github.io/Timer/
