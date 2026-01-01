@@ -19,7 +19,7 @@ const RunTimer = ({
           {formatTime(time).split(":")[0]}:{formatTime(time).split(":")[1]}
         </span>
         <span className="text-3xl ml-1 text-[#65758B]">
-          {formatTime(time).split(":")[2]}
+          :{formatTime(time).split(":")[2]}
         </span>
       </div>
 

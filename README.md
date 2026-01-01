@@ -121,7 +121,5 @@ Transições animadas na UI
 Versão mobile com PWA
 
 Autor
-
-Seu Nome Aqui
 Email: caolo.dev@gmail.com
-🌐 Portfolio: https://link-aqui.com
+Link: https://caolodev.github.io/Timer/
